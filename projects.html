@@ -50,35 +50,102 @@ margin:auto;
 padding:60px 40px;
 }
 
-h1,h2{
+h1{
 color:#d4af37;
+font-size:3em;
+margin-bottom:20px;
 }
 
-.hero{
+.intro{
+font-size:1.15em;
+max-width:950px;
 margin-bottom:60px;
 }
 
+.section-title{
+color:#d4af37;
+border-bottom:2px solid #333;
+padding-bottom:10px;
+margin-top:60px;
+margin-bottom:40px;
+}
+
 .project{
+display:flex;
+gap:40px;
+align-items:flex-start;
 background:#1b1b1b;
 padding:30px;
-margin-bottom:35px;
+margin-bottom:45px;
 border-left:4px solid #d4af37;
+}
+
+.project img{
+width:260px;
+border-radius:8px;
+}
+
+.project-info{
+flex:1;
+}
+
+.project-info h2{
+color:#d4af37;
+margin-top:0;
+font-size:2em;
 }
 
 .status{
 display:inline-block;
-margin-top:15px;
-padding:6px 14px;
 background:#d4af37;
 color:#111;
-font-weight:bold;
+padding:8px 15px;
 border-radius:5px;
+font-weight:bold;
+margin-top:15px;
+}
+
+.future{
+background:#1b1b1b;
+padding:30px;
+border-left:4px solid #d4af37;
+}
+
+.future ul{
+line-height:2;
 }
 
 footer{
 text-align:center;
 padding:35px;
 color:#888;
+}
+
+@media(max-width:800px){
+
+nav a{
+display:inline-block;
+margin:6px 10px;
+}
+
+.container{
+padding:40px 20px;
+}
+
+.project{
+display:block;
+}
+
+.project img{
+width:100%;
+max-width:300px;
+margin-bottom:25px;
+}
+
+h1{
+font-size:2.3em;
+}
+
 }
 
 </style>
@@ -89,7 +156,7 @@ color:#888;
 
 <header>
 
-<img src="Feos Literary Logo.png" alt="James Fedos">
+<img src="Feos Literary Logo.png" alt="Fedos Literary and Strategic Writing">
 
 </header>
 
@@ -106,120 +173,119 @@ color:#888;
 
 <div class="container">
 
-<div class="hero">
-
 <h1>Current Writing Projects</h1>
 
-<p>
+<p class="intro">
 
-Beyond my published novels, I maintain an active development slate of
-historical epics, political thrillers, military fiction, television
-adaptations, and nonfiction projects. These works represent years of
-research, long-form planning, and disciplined execution.
+Beyond my published novels, I maintain an active slate of completed manuscripts, completed historical series, television development, and future works. These projects represent years of research, long-form planning, and disciplined execution.
 
 </p>
 
-</div>
+<h2 class="section-title">Completed Manuscripts</h2>
 
 <div class="project">
+
+<img src="The Last Mapmaker of Constantinople Cover.png" alt="The Last Mapmaker of Constantinople">
+
+<div class="project-info">
 
 <h2>The Last Mapmaker of Constantinople</h2>
 
 <p>
 
-A historical thriller following Venetian cartographer Luca Verrone as the
-fall of Constantinople reshapes the known world through politics,
-espionage, religion, and survival.
+A historical thriller centered on cartography, diplomacy, espionage, and the violent transition of empire as Constantinople approaches its final days.
 
 </p>
 
-<div class="status">
-
-Seeking Representation
+<div class="status">Completed Novel • Seeking Representation</div>
 
 </div>
 
 </div>
 
 <div class="project">
+
+<img src="Ashes of Sherwood Book Cover.png" alt="Ashes of Sherwood">
+
+<div class="project-info">
 
 <h2>Ashes of Sherwood</h2>
 
 <p>
 
-A mature historical thriller exploring the rise of the Sheriff of
-Nottingham decades before Robin Hood becomes legend.
-
-Novel completed.
-
-Television adaptation currently in development.
+A dark historical thriller exploring the origin and political rise of the Sheriff of Nottingham long before Robin Hood becomes legend.
 
 </p>
 
-<div class="status">
-
-TV Development
+<div class="status">Completed Novel • Television Adaptation in Development</div>
 
 </div>
 
 </div>
+
+<h2 class="section-title">Completed Series</h2>
 
 <div class="project">
+
+<img src="Mad Priest Saga Master Cover.png" alt="The Mad Priest Saga">
+
+<div class="project-info">
 
 <h2>The Mad Priest Saga</h2>
 
 <p>
 
-Seven completed historical novels chronicling the life and transformation
-of Abbé Faria, the legendary mentor from <em>The Count of Monte Cristo</em>.
+Seven completed historical novels chronicling the ideological formation, imprisonment, resistance, and transformation of Abbé Faria before the events of <em>The Count of Monte Cristo</em>.
 
 </p>
 
-<div class="status">
-
-Series Complete
+<div class="status">Seven Completed Novels</div>
 
 </div>
 
 </div>
 
 <div class="project">
+
+<img src="Treasure of Spada Master Cover.png" alt="The Treasure of Spada">
+
+<div class="project-info">
 
 <h2>The Treasure of Spada</h2>
 
 <p>
 
-A completed three-volume historical epic spanning nearly two thousand pages
-exploring one of history's greatest legendary fortunes.
+A completed three-volume historical epic spanning approximately 1,900 pages and tracing the generational history behind the fortune that reshapes the world of <em>The Count of Monte Cristo</em>.
 
 </p>
 
-<div class="status">
-
-Series Complete
+<div class="status">Three Completed Novels</div>
 
 </div>
 
 </div>
 
-<div class="project">
+<h2 class="section-title">Future Development Slate</h2>
 
-<h2>Upcoming Projects</h2>
+<div class="future">
 
-<p>
+<ul>
 
-Current development also includes multiple historical and political
-thrillers including works centered on William Wallace, the Three
-Musketeers, the Korean War, Cold War intelligence, maritime history, and
-additional institutional thrillers.
+<li><strong>The Shield and the Black Flag</strong> — Maritime historical thriller</li>
 
-</p>
+<li><strong>Blades of France</strong> — Five-volume historical epic</li>
 
-<div class="status">
+<li><strong>Wolf of Stirling</strong> — Historical epic centered on William Wallace</li>
 
-Active Development
+<li><strong>Fault Lines</strong> — Political and societal-collapse thriller</li>
 
-</div>
+<li><strong>The Line That Would Not Move</strong> — Korean War historical project</li>
+
+<li><strong>The Quiet Doctrine</strong> — Cold War historical project</li>
+
+<li><strong>Captain Ferret's Adventures</strong> — Young-adult adventure series</li>
+
+</ul>
 
 </div>
 
