@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>James Fedos | Actor | Film & Television</title>
+
+  <meta name="description" content="Official acting profile for James Fedos — film and television actor, novelist, and founder. View headshots, credits, acting resume, training, special skills, IMDb, and Actors Access.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0d0d0d;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    /* NAVIGATION */
+    nav {
+      background: #050505;
+      border-bottom: 1px solid #333;
+      padding: 18px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .brand {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #ddd;
+      font-size: .9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .nav-links a:hover,
+    .nav-links .active {
+      color: #fff;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 88vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      max-width: 1300px;
+      margin: auto;
+    }
+
+    .hero-image {
+      height: 88vh;
+      min-height: 650px;
+      background-image:
+        linear-gradient(to right, rgba(13,13,13,0) 65%, #0d0d0d 100%),
+        url("Photoroom_20250512_183756.jpeg");
+      background-size: cover;
+      background-position: center top;
+    }
+
+    .hero-text {
+      padding: 60px;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      font-size: .85rem;
+      color: #aaa;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 6vw, 6rem);
+      line-height: .95;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+    }
+
+    .hero-title {
+      font-size: 1.4rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #ccc;
+      margin-bottom: 28px;
+    }
+
+    .hero-copy {
+      max-width: 580px;
+      font-size: 1.05rem;
+      color: #ccc;
+      margin-bottom: 32px;
+    }
+
+    /* BUTTONS */
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 20px;
+      border: 1px solid #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: .82rem;
+      transition: .2s;
+    }
+
+    .button.primary {
+      background: #fff;
+      color: #111;
+    }
+
+    .button:hover {
+      background: #ddd;
+      color: #111;
+    }
+
+    /* GENERAL SECTIONS */
+    section {
+      padding: 85px 7%;
+    }
+
+    .section-inner {
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+      margin-bottom: 35px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    .light-section {
+      background: #f4f4f4;
+      color: #151515;
+    }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 70px;
+      align-items: start;
+    }
+
+    .about-grid p {
+      margin-bottom: 18px;
+      font-size: 1.05rem;
+    }
+
+    .quick-info {
+      border-left: 3px solid #222;
+      padding-left: 25px;
+    }
+
+    .quick-info p {
+      margin-bottom: 12px;
+    }
+
+    /* HEADSHOTS */
+    .headshot-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .headshot-grid img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      background: #222;
+    }
+
+    .headshot-grid .portrait {
+      height: 650px;
+      object-position: center top;
+    }
+
+    .headshot-grid .landscape {
+      height: 650px;
+      object-position: center;
+    }
+
+    /* CREDITS */
+    .credits {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .credits th,
+    .credits td {
+      text-align: left;
+      padding: 14px 10px;
+      border-bottom: 1px solid #444;
+    }
+
+    .credits th {
+      color: #aaa;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: .8rem;
+    }
+
+    /* SKILLS */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .skill-card {
+      background: #fff;
+      padding: 28px;
+      border: 1px solid #ddd;
+    }
+
+    .skill-card h3 {
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* LINKS */
+    .profile-links {
+      text-align: center;
+    }
+
+    .profile-links p {
+      max-width: 700px;
+      margin: 0 auto 30px;
+      color: #ccc;
+    }
+
+    /* CONTACT */
+    .contact {
+      text-align: center;
+    }
+
+    .contact p {
+      margin-bottom: 25px;
+      color: #ccc;
+    }
+
+    footer {
+      padding: 35px 5%;
+      text-align: center;
+      background: #050505;
+      color: #888;
+      font-size: .85rem;
+    }
+
+    @media (max-width: 850px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-image {
+        height: 70vh;
+        min-height: 500px;
+        background-image:
+          linear-gradient(to bottom, rgba(13,13,13,0) 70%, #0d0d0d 100%),
+          url("Photoroom_20250512_183756.jpeg");
+      }
+
+      .hero-text {
+        padding: 45px 7%;
+      }
+
+      .about-grid,
+      .headshot-grid,
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .headshot-grid .portrait,
+      .headshot-grid .landscape {
+        height: auto;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .brand {
+        width: 100%;
+        text-align: center;
+      }
+
+      .nav-links {
+        justify-content: center;
+      }
+
+      .credits {
+        font-size: .85rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a class="brand" href="index.html">JAMES FEDOS</a>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="books.html">Books</a>
+      <a href="projects.html">Projects</a>
+      <a class="active" href="actor.html">Actor</a>
+      <a href="media.html">Media</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-image"></div>
+
+      <div class="hero-text">
+        <div class="eyebrow">Film &amp; Television</div>
+
+        <h1>JAMES<br>FEDOS</h1>
+
+        <div class="hero-title">Actor</div>
+
+        <p class="hero-copy">
+          Film and television actor with experience in dramatic,
+          military, law-enforcement, authority, and action-oriented roles.
+          A U.S. Coast Guard veteran with extensive tactical, weapons,
+          martial arts, and stage-combat experience.
+        </p>
+
+        <div class="buttons">
+          <a class="button primary"
+             href="James_Fedos_Acting_Resume_2026.pdf"
+             target="_blank">
+             Acting Résumé
+          </a>
+
+          <a class="button"
+             href="https://www.imdb.com/name/nm7944511/"
+             target="_blank"
+             rel="noopener">
+             IMDb
+          </a>
+
+          <a class="button"
+             href="https://resumes.actorsaccess.com/JPHayes1138"
+             target="_blank"
+             rel="noopener">
+             Actors Access
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="light-section">
+      <div class="section-inner">
+
+        <h2 class="section-title">Actor</h2>
+
+        <div class="about-grid">
+
+          <div>
+            <p>
+              James Fedos is an American film and television actor whose
+              professional background brings practical authenticity to
+              military, law-enforcement, government, and authority roles.
+            </p>
+
+            <p>
+              His screen work includes supporting roles across independent
+              film and television productions. His performance background is
+              complemented by extensive experience in martial arts, tactical
+              movement, firearms, stage combat, and weapons choreography.
+            </p>
+
+            <p>
+              Outside acting, Fedos is a published novelist and founder of
+              Fedos Literary &amp; Strategic Writing, bringing a writer's
+              understanding of character, dialogue, story, and cinematic
+              structure to his work on screen.
+            </p>
+          </div>
+
+          <div class="quick-info">
+            <p><strong>Based:</strong> Virginia / Available for Los Angeles &amp; nationwide work</p>
+            <p><strong>Film &amp; Television:</strong> Supporting</p>
+            <p><strong>Specialties:</strong> Military, Tactical, Law Enforcement, Authority, Action</p>
+            <p><strong>Additional:</strong> Novelist | Founder | U.S. Coast Guard Veteran</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-inner">
+
+        <h2 class="section-title">Headshots</h2>
+
+        <div class="headshot-grid">
+
+          <img
+            class="portrait"
+            src="5E85B978-055D-4824-B115-7F2F3084C258.jpg"
+            alt="James Fedos actor headshot">
+
+          <img
+            class="landscape"
+            src="A4CE0445-A942-4C18-9267-CA51256B443A.jpg"
+            alt="James Fedos professional actor portrait">
+
+        </div>
+      </div>
+    </section>
+
+    <section class="light-section">
+      <div class="section-inner">
+
+        <h2 class="section-title">Selected Film &amp; Television</h2>
+
+        <table class="credits">
+          <thead>
+            <tr>
+              <th>Production</th>
+              <th>Role</th>
+              <th>Director / Production</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Most Dangerous</td>
+              <td>Supporting</td>
+              <td>Jake Bohringer</td>
+            </tr>
+            <tr>
+              <td>Johnny Z</td>
+              <td>Supporting</td>
+              <td>Johnathan Straiton / Black Mandala Films</td>
+            </tr>
+            <tr>
+              <td>Life</td>
+              <td>Supporting</td>
+              <td>Mustujab Kirmani / Silicon Mango Studios</td>
+            </tr>
+            <tr>
+              <td>In-Lawfully Yours</td>
+              <td>Supporting</td>
+              <td>Robert Kirbyson / Home Theater Films</td>
+            </tr>
+            <tr>
+              <td>The House of Madness</td>
+              <td>Supporting</td>
+              <td>Jeffery Bowie, Jr.</td>
+            </tr>
+            <tr>
+              <td>Knight's End</td>
+              <td>Supporting</td>
+              <td>Timothy Paul Taylor</td>
+            </tr>
+            <tr>
+              <td>C.E.O.</td>
+              <td>Supporting</td>
+              <td>Antwon Temoney / TeMoney World Productions</td>
+            </tr>
+            <tr>
+              <td>Shape Your World</td>
+              <td>Supporting</td>
+              <td>Patrick Mason</td>
+            </tr>
+            <tr>
+              <td>Love Street Detour</td>
+              <td>Supporting</td>
+              <td>Barking Man Productions</td>
+            </tr>
+            <tr>
+              <td>Classifyd</td>
+              <td>Supporting</td>
+              <td>Gregory Blanch</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </section>
+
+    <section class="light-section">
+      <div class="section-inner">
+
+        <h2 class="section-title">Training &amp; Special Skills</h2>
+
+        <div class="skills-grid">
+
+          <div class="skill-card">
+            <h3>Performance</h3>
+            <p>
+              DC Stunt Coalition — stage combat, bladed weapons, firearms,
+              choreography, rolling, falling, tumbling, and weapons safety.
+            </p>
+          </div>
+
+          <div class="skill-card">
+            <h3>Martial Arts</h3>
+            <p>
+              Filipino martial arts (Kali), stick and knife work,
+              Muay Thai, grappling, Kung Fu, and combat movement.
+            </p>
+          </div>
+
+          <div class="skill-card">
+            <h3>Military / Tactical</h3>
+            <p>
+              U.S. Coast Guard maritime law enforcement, tactical law
+              enforcement, search and rescue, emergency response,
+              surface swimming, and natural-disaster response.
+            </p>
+          </div>
+
+          <div class="skill-card">
+            <h3>Weapons</h3>
+            <p>
+              Experience with shotgun, crew-served machine gun,
+              M-16, M-240B, M-60, SIG, .40, Beretta 9mm,
+              less-lethal weapons, ASP baton, firearms safety,
+              and firearms choreography.
+            </p>
+          </div>
+
+          <div class="skill-card">
+            <h3>Acting Training</h3>
+            <p>
+              Actors Workshop — Acting with an Audience,
+              Ed Claudio, Sacramento, California.
+            </p>
+          </div>
+
+          <div class="skill-card">
+            <h3>Professional Background</h3>
+            <p>
+              Published novelist, founder, U.S. Coast Guard veteran,
+              and longtime federal-program professional.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-inner profile-links">
+
+        <h2 class="section-title">Professional Profiles</h2>
+
+        <p>
+          Casting, production, representation, and industry professionals
+          can view additional credits and professional information below.
+        </p>
+
+        <div class="buttons" style="justify-content:center;">
+
+          <a class="button primary"
+             href="https://resumes.actorsaccess.com/JPHayes1138"
+             target="_blank"
+             rel="noopener">
+             Actors Access
+          </a>
+
+          <a class="button"
+             href="https://www.imdb.com/name/nm7944511/"
+             target="_blank"
+             rel="noopener">
+             IMDb
+          </a>
+
+          <a class="button"
+             href="https://database.castingfrontier.com/account/my_profile"
+             target="_blank"
+             rel="noopener">
+             Casting Frontier
+          </a>
+
+          <a class="button"
+             href="James_Fedos_Acting_Resume_2026.pdf"
+             target="_blank">
+             View Résumé
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="section-inner">
+
+        <h2 class="section-title">Contact</h2>
+
+        <p>
+          For casting, representation, production, and professional inquiries.
+        </p>
+
+        <div class="buttons" style="justify-content:center;">
+          <a class="button primary"
+             href="mailto:James.P.Fedos1138@gmail.com">
+             James.P.Fedos1138@gmail.com
+          </a>
+
+          <a class="button"
+             href="index.html">
+             JamesFedos.com
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    &copy; 2026 James Fedos. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
